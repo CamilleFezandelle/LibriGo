@@ -1,0 +1,8 @@
+/* ==============================
+   LOGIN.CSS - Styles spécifiques
+   ============================== */
+
+.register-text {
+    -fx-text-fill: #666666;
+    -fx-font-size: 13px;
+}

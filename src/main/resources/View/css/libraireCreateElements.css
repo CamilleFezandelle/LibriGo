@@ -1,0 +1,134 @@
+/* ==============================
+   LIBRAIRE CREATE ELEMENTS.CSS - Styles spécifiques
+   ============================== */
+
+/* .field-label -> global.css */
+
+
+/* Le TabPane doit avoir styleClass="styled-tab-pane, create-tab-pane"
+   Seuls les styles spécifiques sont gardés ici.
+*/
+.create-tab-pane .tab-header-area .scroll-pane {
+    -fx-hbar-policy: never;
+}
+
+.create-tab-pane .tab-header-area .scroll-bar:horizontal {
+    -fx-opacity: 0;
+    -fx-max-height: 0;
+    -fx-pref-height: 0;
+    -fx-min-height: 0;
+    visibility: hidden;
+}
+
+.create-tab-pane .tab-header-area .headers-region {
+    -fx-max-width: 820px;
+    -fx-pref-width: 820px;
+}
+
+.create-tab-pane .tab-header-area .tab-header-background {
+    -fx-pref-width: 820px;
+    -fx-max-width: 820px;
+}
+
+
+/* Boutons spécifiques */
+.create-button {
+    -fx-background-color: #10b981;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-padding: 10 24;
+    -fx-pref-width: 160px;
+    -fx-min-height: 40px;
+    -fx-pref-height: 40px;
+    -fx-max-height: 40px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.15), 4, 0, 0, 2);
+}
+
+.create-button:hover {
+    -fx-background-color: #059669;
+    -fx-effect: dropshadow(three-pass-box, rgba(16,185,129,0.3), 6, 0, 0, 2);
+}
+
+.reset-button {
+    -fx-background-color: #64748b;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-padding: 10 24;
+    -fx-pref-width: 140px;
+    -fx-min-height: 40px;
+    -fx-pref-height: 40px;
+    -fx-max-height: 40px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.15), 4, 0, 0, 2);
+}
+
+.reset-button:hover {
+    -fx-background-color: #475569;
+    -fx-effect: dropshadow(three-pass-box, rgba(100,116,139,0.3), 6, 0, 0, 2);
+}
+
+/* Liste spécifique */
+.genre-list {
+    -fx-background-color: white;
+    -fx-background-radius: 8;
+    -fx-border-color: #cbd5e1;
+    -fx-border-width: 1;
+    -fx-border-radius: 8;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 3, 0, 0, 1);
+}
+
+.genre-list .list-cell {
+    -fx-background-color: white;
+    -fx-text-fill: #1e293b;
+    -fx-padding: 10 15;
+    -fx-font-size: 13px;
+}
+
+.genre-list .list-cell:hover {
+    -fx-background-color: #f1f5f9;
+}
+
+.genre-list .list-cell:selected {
+    -fx-background-color: #e0f2fe;
+    -fx-text-fill: #0078d7;
+}
+
+/* ==============================
+   🧩 Correction hauteur champs Créer un livre
+   ============================== */
+
+/* Force une hauteur uniforme dans le GridPane */
+GridPane .input-field {
+    -fx-pref-height: 36px;
+    -fx-min-height: 36px;
+    -fx-max-height: 36px;
+}
+
+/* Spécifie le comportement des ComboBox dans le formulaire */
+GridPane ComboBox.input-field,
+GridPane .combo-box-base.input-field {
+    -fx-pref-height: 36px;
+    -fx-min-height: 36px;
+    -fx-max-height: 36px;
+    -fx-padding: 0 8;
+}
+
+/* Harmonise aussi les TextField dans ce contexte */
+GridPane TextField.input-field {
+    -fx-pref-height: 36px;
+    -fx-min-height: 36px;
+    -fx-max-height: 36px;
+}
+
+/* Et les TextArea (un peu plus hautes naturellement) */
+GridPane TextArea.input-field {
+    -fx-min-height: 90px;
+    -fx-pref-height: 90px;
+}
+
+/* L'accolade en trop a été supprimée */

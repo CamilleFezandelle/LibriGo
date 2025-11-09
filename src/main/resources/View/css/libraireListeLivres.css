@@ -1,0 +1,26 @@
+/* ================================================
+   🎨 Librigo - Liste des livres (Libraire)
+   ================================================ */
+
+/* 🌤️ Fond global -> global.css */
+/* 🧭 Barre d’en-tête -> global.css */
+/* 🔍 Barre de recherche -> global.css */
+/* 📦 Combobox (thème sombre) -> global.css */
+/* 📋 Tableau -> REMPLACER .table par .data-table dans le FXML */
+/* 🎛️ Boutons supprimer -> global.css (.delete-button) */
+
+
+/* Styles spécifiques restants */
+.action-button {
+    -fx-background-color: transparent;
+    -fx-font-size: 13px;
+    -fx-cursor: hand;
+}
+
+.btn-available {
+    -fx-text-fill: #22c55e;
+}
+
+.btn-unavailable {
+    -fx-text-fill: #ef4444;
+}

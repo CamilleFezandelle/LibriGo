@@ -1,0 +1,71 @@
+### 🧠 IntelliJ IDEA ###
+.idea/
+*.iml
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+*.iws
+*.ipr
+
+### 🧱 Build / Compilation ###
+target/
+build/
+*.class
+*.log
+
+### 🚫 Systèmes ###
+.DS_Store
+Thumbs.db
+
+### 🧰 IDEs ###
+# Eclipse
+.apt_generated/
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# VS Code
+.vscode/
+
+### ⚙️ OS / Divers ###
+*.swp
+*.swo
+*.tmp
+
+### ☕️ Java ###
+# Fichiers générés
+*.jar
+*.war
+*.ear
+
+### 🧪 Tests ###
+/test-output/
+/reports/
+/coverage/
+
+### 🔧 Dépendances locales ###
+/libs/
+/lib/
+/dependencies/
+
+### 📦 Maven / Gradle
+target/
+!.mvn/wrapper/maven-wrapper.jar
+.gradle/
+
+### Variables d'environnements ###
+.env
+config.properties

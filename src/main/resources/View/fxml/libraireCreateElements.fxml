@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.librigo.Controller.LibraireCreateElementsController"
+            prefWidth="900" prefHeight="600"
+            stylesheets="@../css/global.css, @../css/libraireCreateElements.css">
+
+    <children>
+
+        <Label text="➕  Ajouter un élément"
+               layoutX="40" layoutY="60"
+               styleClass="title-label"/>
+
+        <ImageView layoutX="380" layoutY="20"
+                   fitWidth="140" fitHeight="140"
+                   preserveRatio="true">
+            <Image url="@../../Images/logo.png"/>
+        </ImageView>
+
+        <Button text="◀  Retourner au tableau de bord"
+                fx:id="backButton"
+                onAction="#handleBackButton"
+                layoutY="135"
+                prefWidth="250"
+                styleClass="back-button" />
+
+        <TabPane layoutX="40" layoutY="180"
+                 prefWidth="820" prefHeight="380"
+                 maxWidth="820"
+                 styleClass="create-tab-pane">
+
+            <tabs>
+
+                <!-- Ajouter un livre -->
+                <Tab text="📘 Ajouter un livre" closable="false">
+
+                    <ScrollPane fitToWidth="true"
+                                fitToHeight="true"
+                                hbarPolicy="NEVER"
+                                styleClass="tab-scroll">
+
+                        <content>
+
+                            <VBox spacing="20">
+
+                                <padding>
+                                    <Insets top="30" right="40" bottom="30" left="40"/>
+                                </padding>
+
+                                <Label text="Informations du livre" styleClass="section-title"/>
+
+                                <GridPane hgap="15" vgap="15">
+
+                                    <columnConstraints>
+                                        <ColumnConstraints percentWidth="30"/>
+                                        <ColumnConstraints percentWidth="70"/>
+                                    </columnConstraints>
+
+                                    <!-- Titre -->
+                                    <Label text="Titre :" GridPane.rowIndex="0" GridPane.columnIndex="0" styleClass="field-label"/>
+                                    <TextField fx:id="livreTitle"
+                                               GridPane.rowIndex="0" GridPane.columnIndex="1" styleClass="input-field"/>
+
+                                    <!-- Auteur -->
+                                    <Label text="Auteur :" GridPane.rowIndex="1" GridPane.columnIndex="0" styleClass="field-label"/>
+                                    <ComboBox fx:id="livreAuteur" promptText="Sélectionnez un auteur"
+                                              GridPane.rowIndex="1" GridPane.columnIndex="1"
+                                              styleClass="input-field"/>
+
+                                    <!-- Genre -->
+                                    <Label text="Genre :" GridPane.rowIndex="2" GridPane.columnIndex="0" styleClass="field-label"/>
+                                    <ComboBox fx:id="livreGenre" promptText="Sélectionnez un genre"
+                                              GridPane.rowIndex="2" GridPane.columnIndex="1"
+                                              styleClass="input-field"/>
+
+                                    <!-- Date de parution -->
+                                    <Label text="Date de parution :" GridPane.rowIndex="3" GridPane.columnIndex="0" styleClass="field-label"/>
+                                    <TextField fx:id="livreDate" promptText="YYYY"
+                                               GridPane.rowIndex="3" GridPane.columnIndex="1" styleClass="input-field"/>
+
+                                    <!-- ISBN -->
+                                    <Label text="ISBN :" GridPane.rowIndex="4" GridPane.columnIndex="0" styleClass="field-label"/>
+                                    <TextField fx:id="livreISBN" promptText="Ex: 9783161484100"
+                                               GridPane.rowIndex="4" GridPane.columnIndex="1" styleClass="input-field"/>
+
+                                    <!-- Description -->
+                                    <Label text="Description :" GridPane.rowIndex="5" GridPane.columnIndex="0" styleClass="field-label"/>
+                                    <TextArea fx:id="livreDescription"
+                                              GridPane.rowIndex="5" GridPane.columnIndex="1"
+                                              prefRowCount="4" wrapText="true" styleClass="input-field"/>
+
+                                </GridPane>
+
+                                <HBox spacing="15" alignment="CENTER_LEFT">
+
+                                    <padding>
+                                        <Insets top="10"/>
+                                    </padding>
+
+                                    <Button text="✅ Ajouter" fx:id="createLivreButton"
+                                            onAction="#handleCreateLivreButton"
+                                            styleClass="create-button"/>
+
+                                </HBox>
+
+                            </VBox>
+
+                        </content>
+
+                    </ScrollPane>
+
+                </Tab>
+
+                <!-- Ajouter un auteur -->
+                <Tab text="👤 Ajouter un auteur" closable="false">
+
+                    <ScrollPane fitToWidth="true"
+                                fitToHeight="true"
+                                hbarPolicy="NEVER"
+                                styleClass="tab-scroll">
+
+                        <content>
+
+                            <VBox spacing="20">
+
+                                <padding>
+                                    <Insets top="30" right="40" bottom="30" left="40"/>
+                                </padding>
+
+                                <Label text="Informations de l'auteur" styleClass="section-title"/>
+
+                                <GridPane hgap="15" vgap="15">
+
+                                    <columnConstraints>
+                                        <ColumnConstraints percentWidth="30"/>
+                                        <ColumnConstraints percentWidth="70"/>
+                                    </columnConstraints>
+
+                                    <!-- Nom -->
+                                    <Label text="Nom :" GridPane.rowIndex="0" GridPane.columnIndex="0" styleClass="field-label"/>
+                                    <TextField fx:id="auteurNom"
+                                               GridPane.rowIndex="0" GridPane.columnIndex="1" styleClass="input-field"/>
+
+                                    <!-- Prénom -->
+                                    <Label text="Prénom :" GridPane.rowIndex="1" GridPane.columnIndex="0" styleClass="field-label"/>
+                                    <TextField fx:id="auteurPrenom"
+                                               GridPane.rowIndex="1" GridPane.columnIndex="1" styleClass="input-field"/>
+
+                                </GridPane>
+
+                                <HBox spacing="15" alignment="CENTER_LEFT">
+
+                                    <padding>
+                                        <Insets top="10"/>
+                                    </padding>
+
+                                    <Button text="✅ Ajouter" fx:id="createAuteurButton"
+                                            onAction="#handleCreateAuteurButton"
+                                            styleClass="create-button"/>
+
+                                </HBox>
+
+                            </VBox>
+
+                        </content>
+
+                    </ScrollPane>
+
+                </Tab>
+
+                <!-- Ajouter un genre -->
+                <Tab text="🏷️ Ajouter un genre" closable="false">
+
+                    <ScrollPane fitToWidth="true"
+                                fitToHeight="true"
+                                hbarPolicy="NEVER"
+                                styleClass="tab-scroll">
+
+                        <content>
+
+                            <VBox spacing="20">
+
+                                <padding>
+                                    <Insets top="30" right="40" bottom="30" left="40"/>
+                                </padding>
+
+                                <Label text="Informations du genre" styleClass="section-title"/>
+
+                                <GridPane hgap="15" vgap="15">
+
+                                    <columnConstraints>
+                                        <ColumnConstraints percentWidth="30"/>
+                                        <ColumnConstraints percentWidth="70"/>
+                                    </columnConstraints>
+
+                                    <!-- Nom -->
+                                    <Label text="Nom du genre :" GridPane.rowIndex="0" GridPane.columnIndex="0" styleClass="field-label"/>
+                                    <TextField fx:id="genreNom"
+                                               GridPane.rowIndex="0" GridPane.columnIndex="1" styleClass="input-field"/>
+
+                                </GridPane>
+
+                                <HBox spacing="15" alignment="CENTER_LEFT">
+
+                                    <padding>
+                                        <Insets top="10"/>
+                                    </padding>
+
+                                    <Button text="✅ Ajouter" fx:id="createGenreButton"
+                                            onAction="#handleCreateGenreButton"
+                                            styleClass="create-button"/>
+
+                                </HBox>
+
+                            </VBox>
+
+                        </content>
+
+                    </ScrollPane>
+
+                </Tab>
+
+            </tabs>
+
+        </TabPane>
+
+    </children>
+
+</AnchorPane>

@@ -1,0 +1,43 @@
+/* ==============================
+   CONSULTER LIVRE.CSS - Styles spécifiques
+   ============================== */
+
+.book-card {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 12;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 10, 0, 0, 5);
+    -fx-max-width: 700;
+    -fx-min-width: 700;
+    -fx-pref-width: 700;
+    -fx-max-height: 320;
+    -fx-min-height: 320;
+    -fx-pref-height: 320;
+}
+
+.book-description {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #dce3eb;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-font-size: 13px;
+    -fx-text-fill: #333;
+    -fx-pref-height: 340;
+}
+
+.borrow-button {
+    -fx-background-color: #4a90e2;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-pref-width: 140px;
+    -fx-pref-height: 35px;
+}
+
+.borrow-button:hover {
+    -fx-background-color: #357abd;
+}
+
+#bookAvailability {
+    -fx-font-weight: bold;
+}

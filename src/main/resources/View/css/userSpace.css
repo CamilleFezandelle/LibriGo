@@ -1,0 +1,172 @@
+/* ==============================================
+   🎨 USERSPACE.CSS — Espace Utilisateur (Librigo)
+   ============================================== */
+
+/* =========================
+   🧾 EN-TÊTE DU COMPTE
+   ========================= */
+.account-label {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1e293b;
+}
+
+.account-number-label {
+    -fx-font-size: 13px;
+    -fx-text-fill: #64748b;
+    -fx-font-style: italic;
+}
+
+/* =========================
+   🧭 ONGLET PRINCIPAL (TABPANE)
+   REMPLACER .user-tab-pane par .styled-tab-pane dans le FXML
+   (Styles maintenant dans global.css)
+   =========================
+*/
+
+/* =========================
+   📚 CARTES DE LIVRES (Mes emprunts)
+   ========================= */
+.book-card {
+    -fx-background-color: #2b2b2b;
+    -fx-background-radius: 12;
+    -fx-padding: 18;
+    -fx-spacing: 25;
+    -fx-alignment: CENTER_LEFT;
+    -fx-border-color: #3a3a3a;
+    -fx-border-radius: 12;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.25), 8, 0, 0, 3);
+    -fx-min-width: 100%;
+    -fx-max-width: Infinity;
+}
+
+.book-card:hover {
+    -fx-background-color: #333333;
+    -fx-border-color: #0078d7;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.45), 12, 0, 0, 5);
+}
+
+.book-title {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+    -fx-wrap-text: false;
+}
+
+.book-author {
+    -fx-font-size: 13px;
+    -fx-text-fill: #b0b0b0;
+    -fx-wrap-text: false;
+}
+
+.book-year {
+    -fx-font-size: 12px;
+    -fx-text-fill: #8c8c8c;
+    -fx-wrap-text: false;
+}
+
+.book-availability {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+}
+
+.book-button {
+    -fx-background-color: #0078d7;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-padding: 6 16;
+    -fx-pref-width: 120px;
+    -fx-min-width: 120px;
+    -fx-max-width: 120px;
+    -fx-pref-height: 34px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.25), 4, 0, 0, 1);
+}
+
+.book-button:hover {
+    -fx-background-color: #005fa3;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,120,215,0.3), 8, 0, 0, 2);
+}
+
+#genreContainer {
+    -fx-background-color: transparent;
+    -fx-padding: 20 10 40 10;
+    -fx-hgap: 20;
+    -fx-vgap: 20;
+}
+
+.book-reservation-date {
+    -fx-font-size: 12px;
+    -fx-text-fill: #aaaaaa;
+    -fx-font-style: italic;
+}
+
+.book-days-status {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.book-days-left {
+    -fx-text-fill: #4caf50;
+}
+
+.book-days-late {
+    -fx-text-fill: #f44336;
+}
+
+/* =========================
+   🧍 FORMULAIRE UTILISATEUR (Informations personnelles)
+   ========================= */
+
+/* .field-label -> global.css */
+
+/* Champs éditables */
+.user-input {
+    -fx-font-size: 13px;
+    -fx-background-color: #f8fafc;
+    -fx-border-color: #cfd8dc;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 6 10;
+    -fx-text-fill: #1e293b;
+}
+
+.user-input:focused {
+    -fx-border-color: #0078d7;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,120,215,0.2), 5, 0, 0, 1);
+}
+
+/* Champs désactivés */
+.user-input-disabled {
+    -fx-font-size: 13px;
+    -fx-background-color: #f1f5f9;
+    -fx-border-color: #cbd5e1;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 6 10;
+    -fx-text-fill: #64748b;
+}
+
+/* =========================
+   💾 BOUTON DE SAUVEGARDE
+   ========================= */
+.save-button {
+    -fx-background-color: #0078d7;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-padding: 8 20;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.25), 4, 0, 0, 2);
+}
+
+.save-button:hover {
+    -fx-background-color: #005fa3;
+}
+
+/* =========================
+   🖱️ SCROLL & CONTENEURS
+   (Styles redondants avec .tab-scroll de global.css)
+   =========================
+*/

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.librigo.Controller.LibraireListeLivresController"
+            prefWidth="900" prefHeight="600"
+            stylesheets="@../css/global.css, @../css/libraireListeLivres.css">
+
+    <children>
+
+        <Label text="📚  Gestion des livres"
+               layoutX="40" layoutY="60"
+               styleClass="title-label"/>
+
+        <ImageView layoutX="380" layoutY="20"
+                   fitWidth="140" fitHeight="140"
+                   preserveRatio="true">
+            <Image url="@../../Images/logo.png"/>
+        </ImageView>
+
+        <Button text="◀  Retourner au tableau de bord"
+                fx:id="backButton"
+                onAction="#handleBackButton"
+                layoutY="135"
+                prefWidth="250"
+                styleClass="back-button" />
+
+        <TextField fx:id="searchField"
+                   layoutX="610" layoutY="65"
+                   prefWidth="250"
+                   promptText="Rechercher..."
+                   styleClass="search-field" />
+
+        <ComboBox fx:id="genreSelect"
+                  layoutX="610" layoutY="120"
+                  prefWidth="250"
+                  promptText="Choisir un genre" />
+
+        <VBox layoutX="40" layoutY="180" spacing="15" prefWidth="820" prefHeight="380">
+
+            <!-- Tableau des livres -->
+            <TableView fx:id="tableLivres" prefHeight="380" styleClass="table">
+
+                <columns>
+
+                    <TableColumn fx:id="colISBN" text="ISBN" prefWidth="120"/>
+                    <TableColumn fx:id="colLivre" text="Livre" prefWidth="310"/>
+                    <TableColumn fx:id="colDispo" text="Disponibilité" prefWidth="80"/>
+                    <TableColumn fx:id="colAction" text="Action" prefWidth="150"/>
+                    <TableColumn fx:id="colSupprimer" text="Supprimer" prefWidth="120"/>
+
+                </columns>
+
+            </TableView>
+
+        </VBox>
+
+    </children>
+
+</AnchorPane>

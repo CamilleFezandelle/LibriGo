@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.librigo.Controller.LibraireDashboardController"
+            prefWidth="900" prefHeight="600"
+            stylesheets="@../css/global.css, @../css/libraireDashboard.css">
+
+    <children>
+
+        <VBox alignment="CENTER"
+              spacing="25"
+              prefWidth="900" prefHeight="600">
+
+            <Label text="Espace Libraire"
+                   styleClass="title-label" />
+
+            <VBox spacing="15" alignment="CENTER">
+
+                <Button text="➕  Ajouter un élément"
+                        fx:id="ajouterButton"
+                        onAction="#handleAjouterButtonAction"
+                        styleClass="primary-button"/>
+
+                <Button text="📚  Gestion des livres"
+                        fx:id="livresButton"
+                        onAction="#handleLivresButtonAction"
+                        styleClass="primary-button"/>
+
+                <Button text="🕓  Gestion des emprunts"
+                        fx:id="empruntsButton"
+                        onAction="#handleEmpruntsButtonAction"
+                        styleClass="primary-button"/>
+
+                <Button text="👥  Gestion des adhérents"
+                        fx:id="adherentsButton"
+                        onAction="#handleAdherentsButtonAction"
+                        styleClass="primary-button"/>
+
+            </VBox>
+
+            <Hyperlink text="◀  Retour à l'accueil"
+                       fx:id="retourAccueil"
+                       onAction="#handleBackButton"
+                       styleClass="back-button"/>
+
+        </VBox>
+
+    </children>
+
+</AnchorPane>

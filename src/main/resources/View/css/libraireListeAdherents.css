@@ -1,0 +1,13 @@
+/* ================================================
+   🎨 Librigo - Liste des Adhérents (Libraire)
+   ================================================ */
+
+/* 🌤️ Fond global -> global.css */
+/* 🧭 Barre d’en-tête -> global.css */
+/* 🔍 Barre de recherche -> global.css */
+
+/* 📋 Tableau -> REMPLACER .book-table par .data-table dans le FXML
+   (Styles maintenant dans global.css)
+*/
+
+/* 🎛️ Boutons supprimer -> global.css (.delete-button) */

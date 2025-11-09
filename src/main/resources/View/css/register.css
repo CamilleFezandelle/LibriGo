@@ -1,0 +1,17 @@
+/* ==============================
+   REGISTER.CSS - Styles spécifiques
+   ============================== */
+
+/* REMPLACÉ par .primary-button dans le FXML
+#registerButton { ... }
+#registerButton:hover { ... }
+*/
+
+/* REMPLACÉ par .link-button-underlined dans le FXML
+#backToLoginButton { ... }
+#backToLoginButton:hover { ... }
+*/
+
+/* REMPLACÉ par .error-label dans le FXML
+#errorLabel { ... }
+*/

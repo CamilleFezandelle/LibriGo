@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.librigo.Controller.UserSpaceController"
+            prefWidth="900" prefHeight="600"
+            stylesheets="@../css/global.css, @../css/userSpace.css">
+
+    <children>
+
+        <Label text="👤  Mon espace"
+               layoutX="40" layoutY="60"
+               styleClass="title-label"/>
+
+        <ImageView layoutX="380" layoutY="20"
+                   fitWidth="140" fitHeight="140"
+                   preserveRatio="true">
+            <Image url="@../../Images/logo.png"/>
+        </ImageView>
+
+        <Label layoutX="40" layoutY="40"
+               styleClass="account-label" />
+
+        <Label layoutX="40" layoutY="60"
+               styleClass="account-number-label" />
+
+        <Button text="◀  Retourner à l'accueil"
+                fx:id="backButton"
+                layoutX="40" layoutY="135"
+                prefWidth="140"
+                onAction="#handleBackButton"
+                styleClass="back-button" />
+
+        <TabPane layoutX="40" layoutY="180"
+                 prefWidth="820" prefHeight="380"
+                 styleClass="user-tab-pane">
+
+            <tabs>
+
+                <!-- Emprunts de l'adhérent -->
+                <Tab text="📚 Mes emprunts" closable="false">
+
+                    <ScrollPane fitToWidth="true"
+                                fitToHeight="true"
+                                hbarPolicy="NEVER"
+                                styleClass="tab-scroll">
+
+                        <content>
+
+                            <!-- Container des livres empruntés -->
+                            <GridPane fx:id="genreContainer" hgap="20" vgap="20">
+
+                                <columnConstraints>
+                                    <ColumnConstraints percentWidth="50.0"/>
+                                    <ColumnConstraints percentWidth="50.0"/>
+                                </columnConstraints>
+
+                                <padding>
+                                    <Insets top="20" right="20" bottom="20" left="20"/>
+                                </padding>
+
+                            </GridPane>
+
+                        </content>
+
+                    </ScrollPane>
+
+                </Tab>
+
+                <!-- Informations personnelles -->
+                <Tab text="👤 Informations personnelles" closable="false">
+
+                    <ScrollPane fitToWidth="true"
+                                fitToHeight="true"
+                                hbarPolicy="NEVER"
+                                styleClass="tab-scroll">
+
+                        <content>
+
+                            <VBox spacing="20">
+
+                                <padding>
+                                    <Insets top="30" right="40" bottom="30" left="40"/>
+                                </padding>
+
+                                <GridPane hgap="15" vgap="15">
+
+                                    <columnConstraints>
+                                        <ColumnConstraints percentWidth="30"/>
+                                        <ColumnConstraints percentWidth="70"/>
+                                    </columnConstraints>
+
+                                    <!-- Email -->
+                                    <Label text="Email :" GridPane.rowIndex="0" GridPane.columnIndex="0" styleClass="field-label"/>
+                                    <TextField fx:id="inputEmail"
+                                               editable="false"
+                                               style="-fx-opacity: 0.8;"
+                                               GridPane.rowIndex="0"
+                                               GridPane.columnIndex="1"
+                                               styleClass="user-input-disabled"/>
+
+                                    <!-- Numéro d'adhérent -->
+                                    <Label text="Numéro d'adhérent :" GridPane.rowIndex="1" GridPane.columnIndex="0" styleClass="field-label"/>
+                                    <TextField fx:id="inputNumber"
+                                               editable="false"
+                                               style="-fx-opacity: 0.8;"
+                                               GridPane.rowIndex="1"
+                                               GridPane.columnIndex="1"
+                                               styleClass="user-input-disabled"/>
+
+                                    <!-- Nom -->
+                                    <Label text="Nom :" GridPane.rowIndex="2" GridPane.columnIndex="0" styleClass="field-label"/>
+                                    <TextField fx:id="inputLastName"
+                                               GridPane.rowIndex="2"
+                                               GridPane.columnIndex="1"
+                                               styleClass="user-input"/>
+
+                                    <!-- Prénom -->
+                                    <Label text="Prénom :" GridPane.rowIndex="3" GridPane.columnIndex="0" styleClass="field-label"/>
+                                    <TextField fx:id="inputFirstName"
+                                               GridPane.rowIndex="3"
+                                               GridPane.columnIndex="1"
+                                               styleClass="user-input"/>
+
+                                    <!-- Adresse -->
+                                    <Label text="Adresse :" GridPane.rowIndex="4" GridPane.columnIndex="0" styleClass="field-label"/>
+                                    <TextField fx:id="inputAddress"
+                                               GridPane.rowIndex="4"
+                                               GridPane.columnIndex="1"
+                                               styleClass="user-input"/>
+
+                                    <!-- CP-->
+                                    <Label text="Code postal :" GridPane.rowIndex="5" GridPane.columnIndex="0" styleClass="field-label"/>
+                                    <TextField fx:id="inputPostalCode"
+                                               GridPane.rowIndex="5"
+                                               GridPane.columnIndex="1"
+                                               styleClass="user-input"/>
+
+                                    <!-- Ville -->
+                                    <Label text="Ville :" GridPane.rowIndex="6" GridPane.columnIndex="0" styleClass="field-label"/>
+                                    <TextField fx:id="inputCity"
+                                               GridPane.rowIndex="6"
+                                               GridPane.columnIndex="1"
+                                               styleClass="user-input"/>
+
+                                </GridPane>
+
+                                <HBox spacing="15" alignment="CENTER_RIGHT">
+
+                                    <padding>
+                                        <Insets top="10"/>
+                                    </padding>
+
+                                    <Button fx:id="btnSaveUserInfo"
+                                            text="💾 Sauvegarder les modifications"
+                                            onAction="#handleChangeInfoButton"
+                                            styleClass="save-button"/>
+
+                                </HBox>
+
+                            </VBox>
+
+                        </content>
+
+                    </ScrollPane>
+
+                </Tab>
+
+                <!-- Mot de passe -->
+                <Tab text="🔐 Modifier le mot de passe" closable="false">
+
+                    <ScrollPane fitToWidth="true"
+                                fitToHeight="true"
+                                hbarPolicy="NEVER"
+                                styleClass="tab-scroll">
+
+                        <content>
+
+                            <VBox spacing="20">
+
+                                <padding>
+                                    <Insets top="30" right="40" bottom="30" left="40"/>
+                                </padding>
+
+                                <GridPane hgap="15" vgap="15">
+
+                                    <columnConstraints>
+                                        <ColumnConstraints percentWidth="30"/>
+                                        <ColumnConstraints percentWidth="70"/>
+                                    </columnConstraints>
+
+                                    <!-- Ancien mot de passe -->
+                                    <Label text="Ancien mot de passe :"
+                                           GridPane.rowIndex="0" GridPane.columnIndex="0"
+                                           styleClass="field-label"/>
+                                    <PasswordField fx:id="inputOldPassword"
+                                                   GridPane.rowIndex="0" GridPane.columnIndex="1"
+                                                   styleClass="user-input"/>
+
+                                    <!-- Nouveau mot de passe -->
+                                    <Label text="Nouveau mot de passe :"
+                                           GridPane.rowIndex="1" GridPane.columnIndex="0"
+                                           styleClass="field-label"/>
+                                    <PasswordField fx:id="inputNewPassword"
+                                                   GridPane.rowIndex="1" GridPane.columnIndex="1"
+                                                   styleClass="user-input"/>
+
+                                    <!-- Confirmation -->
+                                    <Label text="Confirmer le mot de passe :"
+                                           GridPane.rowIndex="2" GridPane.columnIndex="0"
+                                           styleClass="field-label"/>
+                                    <PasswordField fx:id="inputConfirmPassword"
+                                                   GridPane.rowIndex="2" GridPane.columnIndex="1"
+                                                   styleClass="user-input"/>
+
+                                </GridPane>
+
+                                <HBox spacing="15" alignment="CENTER_RIGHT">
+
+                                    <padding>
+                                        <Insets top="10"/>
+                                    </padding>
+
+                                    <Button fx:id="btnChangePassword"
+                                            text="🔄 Modifier le mot de passe"
+                                            onAction="#handleChangePasswordButton"
+                                            styleClass="save-button"/>
+
+                                </HBox>
+
+                            </VBox>
+
+                        </content>
+
+                    </ScrollPane>
+
+                </Tab>
+
+            </tabs>
+
+        </TabPane>
+
+    </children>
+
+</AnchorPane>

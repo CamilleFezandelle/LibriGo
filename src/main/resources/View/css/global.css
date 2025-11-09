@@ -1,0 +1,564 @@
+/* ==============================
+   🌐 GLOBAL.CSS - Styles communs
+   ============================== */
+
+/* ==============================
+   🌤️ Fond global
+   ============================== */
+.root-pane,
+AnchorPane {
+    -fx-background-color: linear-gradient(to bottom right, #f8fafc, #e9eef3);
+    -fx-font-family: "Segoe UI", "Roboto", sans-serif;
+}
+
+/* ==============================
+   🖼️ Partie gauche (logo)
+   ============================== */
+.left-pane {
+    -fx-background-color: #f1f5fb;
+    -fx-alignment: center;
+    -fx-border-color: #dce3eb;
+    -fx-border-width: 0 1 0 0;
+}
+
+/* ==============================
+   🏷️ Titres
+   ============================== */
+.title-label {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+    -fx-padding: 0 0 10 0;
+}
+
+.page-title {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+    -fx-text-alignment: center;
+    -fx-wrap-text: true;
+    -fx-max-width: 700;
+}
+
+.section-title {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+    -fx-padding: 0 0 10 0;
+}
+
+/* ==============================
+   🧠 Champs de saisie
+   ============================== */
+.text-field,
+.password-field {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #c9d3e1;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-pref-width: 260px;
+    -fx-pref-height: 35px;
+    -fx-font-size: 14px;
+    -fx-padding: 0 10;
+    -fx-text-fill: #2c3e50;
+}
+
+.text-field:focused,
+.password-field:focused {
+    -fx-border-color: #4a90e2;
+    -fx-background-color: #f9fbff;
+}
+
+/* Champs avec classe input-field (pour les formulaires) */
+TextField.input-field,
+PasswordField.input-field {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #c9d3e1;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-pref-height: 35px;
+    -fx-font-size: 14px;
+    -fx-padding: 0 10;
+    -fx-text-fill: #2c3e50;
+    -fx-max-width: Infinity;
+}
+
+TextField.input-field:focused,
+PasswordField.input-field:focused {
+    -fx-border-color: #4a90e2;
+    -fx-background-color: #f9fbff;
+}
+
+/* ==============================
+   📝 TextArea
+   ============================== */
+TextArea.input-field {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #c9d3e1;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-font-size: 13px;
+    -fx-text-fill: #2c3e50;
+    -fx-padding: 8 12;
+    -fx-min-height: 100px;
+    -fx-pref-height: 100px;
+    -fx-max-width: Infinity;
+}
+
+TextArea.input-field:focused {
+    -fx-border-color: #4a90e2;
+    -fx-border-width: 1;
+}
+
+TextArea.input-field .content,
+TextArea.input-field .scroll-pane,
+TextArea.input-field .scroll-pane .viewport {
+    -fx-background-color: white;
+}
+
+/* ==============================
+   🔘 Boutons principaux
+   ============================== */
+.primary-button {
+    -fx-background-color: #4a90e2;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-pref-width: 150px;
+    -fx-pref-height: 35px;
+    -fx-max-height: 35px;
+    -fx-min-height: 35px;
+    -fx-font-size: 14px;
+}
+
+.primary-button:hover {
+    -fx-background-color: #357abd;
+}
+
+/* ==============================
+   🔗 Boutons liens / retour
+   ============================== */
+.link-button,
+.back-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #4a90e2;
+    -fx-underline: false;
+    -fx-font-weight: normal;
+    -fx-font-size: 13px;
+    -fx-cursor: hand;
+    -fx-padding: 0;
+}
+
+.link-button:hover,
+.back-button:hover {
+    -fx-text-fill: #2f5c9e;
+}
+
+/* ==============================
+   📦 Cartes / Boîtes
+   ============================== */
+.form-box {
+    -fx-background-color: #ffffff;
+    -fx-padding: 40 50;
+    -fx-background-radius: 12;
+    -fx-spacing: 20;
+    -fx-alignment: center;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 8, 0, 0, 3);
+}
+
+/* ==============================
+   🟥 Messages d'erreur
+   ============================== */
+.error-label {
+    -fx-text-fill: #d93025;
+    -fx-font-size: 13px;
+    -fx-font-style: italic;
+}
+
+/* ==============================
+   🟩 Messages de succès
+   ============================== */
+.success-label {
+    -fx-text-fill: #28a745;
+    -fx-font-size: 13px;
+    -fx-font-style: italic;
+}
+
+/* ==============================
+   ➖ Séparateur
+   ============================== */
+.divider {
+    -fx-background-color: #dce3eb;
+    -fx-opacity: 0.7;
+}
+
+/* ==============================
+   📅 DatePicker
+   ============================== */
+.date-picker,
+DatePicker.input-field {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #c9d3e1;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-pref-height: 35px;
+    -fx-min-height: 35px;
+    -fx-max-height: 35px;
+}
+
+.date-picker:focused,
+DatePicker.input-field:focused {
+    -fx-border-color: #4a90e2;
+    -fx-background-color: #f9fbff;
+    -fx-border-width: 1;
+}
+
+.date-picker .text-field {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+    -fx-padding: 0 36 0 10;
+    -fx-alignment: CENTER_LEFT;
+    -fx-font-size: 14px;
+    -fx-text-fill: #2c3e50;
+    -fx-pref-height: 35px;
+}
+
+.date-picker .arrow-button {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+    -fx-padding: 0 6;
+    -fx-pref-width: 32px;
+    -fx-alignment: CENTER;
+}
+
+.date-picker .arrow-button:hover {
+    -fx-background-color: #e6eef8;
+    -fx-background-radius: 0 6 6 0;
+}
+
+.date-picker .arrow {
+    -fx-background-color: #4a90e2;
+}
+
+/* ==============================
+   📦 ComboBox (Thème clair / Formulaire)
+   ============================== */
+ComboBox.input-field {
+    -fx-background-color: white;
+    -fx-border-color: #c9d3e1;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-min-height: 36px;
+    -fx-pref-height: 36px;
+    -fx-max-height: 36px;
+    -fx-font-size: 14px;
+    -fx-padding: 4 8;
+    -fx-max-width: Infinity;
+}
+
+ComboBox.input-field:focused {
+    -fx-border-color: #4a90e2;
+    -fx-border-width: 1;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+ComboBox.input-field .list-cell {
+    -fx-background-color: white;
+    -fx-text-fill: #1e293b;
+    -fx-padding: 8 12;
+    -fx-min-height: 36px;
+    -fx-pref-height: 36px;
+}
+
+ComboBox.input-field .list-cell:hover {
+    -fx-background-color: #f1f5f9;
+}
+
+ComboBox.input-field .arrow-button {
+    -fx-padding: 0 8 0 0;
+    -fx-background-color: transparent;
+}
+
+ComboBox.input-field .arrow {
+    -fx-background-color: #64748b;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: white;
+    -fx-border-color: #cbd5e1;
+    -fx-border-width: 1;
+    -fx-border-radius: 6;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.15), 8, 0, 0, 2);
+}
+
+.combo-box-popup .list-view .list-cell {
+    -fx-background-color: white;
+    -fx-text-fill: #1e293b;
+    -fx-padding: 8 12;
+}
+
+.combo-box-popup .list-view .list-cell:hover {
+    -fx-background-color: #f1f5f9;
+}
+
+.combo-box-popup .list-view .list-cell:selected {
+    -fx-background-color: #e0f2fe;
+    -fx-text-fill: #0078d7;
+}
+
+/* ==============================
+   📋 ScrollPane
+   ============================== */
+.tab-scroll {
+    -fx-fit-to-width: true;
+    -fx-hbar-policy: never;
+    -fx-vbar-policy: as-needed;
+    -fx-background-color: transparent;
+}
+
+/* ==============================
+   ✅ Disponibilité
+   ============================== */
+.book-available {
+    -fx-text-fill: #28a745;
+}
+
+.book-unavailable {
+    -fx-text-fill: #d93025;
+}
+
+
+/* ==================================================================
+   ✨ NOUVEAUX STYLES COMMUNS (AJOUTÉS LORS DE LA REFONTE)
+   ================================================================== */
+
+/* ==============================
+   🏷️ Labels de formulaire (depuis userSpace & createElements)
+   ============================== */
+.field-label {
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #334155;
+    -fx-alignment: CENTER_LEFT;
+}
+
+/* ==============================
+   🧭 En-tête de page (depuis libraireListe...)
+   ============================== */
+.header-bar {
+    -fx-background-color: #f1f5fb;
+    -fx-padding: 10 20;
+    -fx-border-color: #dce3eb;
+    -fx-border-width: 0 0 1 0;
+}
+
+.header-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1e293b;
+}
+
+/* ==============================
+   📋 Tableau de données (depuis libraireListe...)
+   ============================== */
+.data-table {
+    -fx-background-color: white;
+    -fx-border-color: #dce3eb;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-padding: 5;
+}
+.data-table .column-header-background {
+    -fx-background-color: #e2e8f0;
+}
+.data-table .table-row-cell:selected {
+    -fx-background-color: #bfdbfe;
+}
+
+/* ==============================
+   🗑️ Bouton Supprimer (depuis libraireListe...)
+   ============================== */
+.delete-button {
+    -fx-background-color: transparent;
+    -fx-font-size: 13px;
+    -fx-cursor: hand;
+    -fx-text-fill: #ef4444;
+    -font-weight: bold;
+}
+
+/* ==============================
+   🔍 Champ Recherche (Thème Sombre) (depuis libraireListe... & dashboard)
+   ============================== */
+.search-field {
+    -fx-background-color: #2b2b2b;
+    -fx-text-fill: #e0e0e0;
+    -fx-border-color: #3c3c3c;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-pref-height: 36px;
+    -fx-font-size: 14px;
+    -fx-padding: 0 12;
+    -fx-prompt-text-fill: #aaaaaa;
+    -fx-cursor: text;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 4, 0, 0, 1);
+}
+
+.search-field:focused {
+    -fx-background-color: #353535;
+    -fx-border-color: #0078d7;
+    -fx-effect: dropshadow(gaussian, rgba(0,120,215,0.25), 10, 0, 0, 2);
+}
+
+/* ==============================
+   📦 ComboBox (Thème Sombre) (depuis libraireListe... & dashboard)
+   ============================== */
+.combo-box {
+    -fx-background-color: #2b2b2b;
+    -fx-background-radius: 8;
+    -fx-border-color: #3c3c3c;
+    -fx-border-radius: 8;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14px;
+    -fx-padding: 4 8;
+    -fx-cursor: hand;
+}
+
+.combo-box:hover {
+    -fx-background-color: #353535;
+    -fx-border-color: #4d4d4d;
+}
+
+.combo-box:focused,
+.combo-box-base:focused,
+.combo-box .text-field:focused {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+/* Style de la cellule affichée */
+.combo-box .list-cell {
+    -fx-background-color: #2b2b2b;
+    -fx-text-fill: #e0e0e0;
+    -fx-font-size: 13px;
+}
+.combo-box .list-cell:selected {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+/* Style du popup */
+.combo-box-popup .list-view .list-cell:selected {
+    -fx-background-color: #0078d7;
+    -fx-text-fill: white;
+}
+
+.combo-box .arrow-button {
+    -fx-background-color: transparent;
+}
+
+.combo-box .arrow {
+    -fx-background-color: #aaaaaa;
+}
+
+.combo-box:hover .arrow {
+    -fx-background-color: #ffffff;
+}
+
+/* ==============================
+   🧭 Onglets Stylisés (depuis userSpace & createElements)
+   ============================== */
+.styled-tab-pane {
+    -fx-background-color: transparent;
+    -fx-tab-min-width: 200px;
+    -fx-tab-max-width: 200px;
+    -fx-tab-min-height: 50px;
+    -fx-tab-max-height: 50px;
+    -fx-background-radius: 10;
+}
+
+.styled-tab-pane .tab-header-area {
+    -fx-background-color: #e2e8f0;
+    -fx-border-color: #cfd8dc;
+    -fx-border-width: 0 0 1 0;
+    -fx-min-height: 50px;
+    -fx-pref-height: 50px;
+    -fx-max-height: 50px;
+    -fx-padding: 0;
+    -fx-overflow: hidden;
+}
+
+.styled-tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color: #e2e8f0;
+}
+
+.styled-tab-pane .tab {
+    -fx-background-color: #f8fafc;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #334155;
+    -fx-alignment: CENTER;
+    -fx-border-color: transparent transparent #cfd8dc transparent;
+    -fx-border-width: 0 0 1 0;
+    -fx-cursor: hand;
+    -fx-pref-width: 200px;
+    -fx-min-width: 200px;
+    -fx-max-width: 200px;
+}
+
+.styled-tab-pane .tab:hover {
+    -fx-background-color: #f1f5f9;
+}
+
+.styled-tab-pane .tab:selected {
+    -fx-background-color: #0078d7;
+}
+
+.styled-tab-pane .tab-label {
+    -fx-text-fill: #334155;
+}
+
+.styled-tab-pane .tab:selected .tab-label {
+    -fx-text-fill: white;
+}
+
+.styled-tab-pane .tab .tab-container {
+    -fx-alignment: CENTER;
+}
+
+.styled-tab-pane .tab-header-area .control-buttons-tab {
+    -fx-padding: 0;
+    -fx-opacity: 0;
+    -fx-max-width: 0;
+    -fx-pref-width: 0;
+    -fx-min-width: 0;
+    -fx-max-height: 0;
+    -fx-pref-height: 0;
+    -fx-min-height: 0;
+    visibility: hidden;
+}
+
+.styled-tab-pane .tab-header-area .headers-region {
+    -fx-padding: 0;
+    -fx-alignment: CENTER;
+    -fx-hgap: 0;
+    -fx-spacing: 0;
+}
+
+/* ==============================
+   🔗 Bouton Lien Souligné (depuis login, register, lostPassword)
+   ============================== */
+.link-button-underlined {
+    -fx-background-color: transparent;
+    -fx-text-fill: #4a90e2;
+    -fx-underline: true;
+    -fx-font-weight: normal;
+    -fx-font-size: 13px;
+    -fx-cursor: hand;
+    -fx-padding: 0;
+}
+
+.link-button-underlined:hover {
+    -fx-text-fill: #2f5c9e;
+}

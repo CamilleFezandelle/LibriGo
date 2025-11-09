@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.librigo.Controller.RegisterController"
+            prefHeight="600.0" prefWidth="900.0"
+            stylesheets="@../css/global.css, @../css/register.css"
+            styleClass="root-pane">
+
+    <HBox prefWidth="900.0" prefHeight="600.0">
+
+        <StackPane prefWidth="450" styleClass="left-pane">
+
+            <ImageView fitWidth="200" preserveRatio="true">
+                <Image url="@../../Images/logo.png"/>
+            </ImageView>
+
+        </StackPane>
+
+        <VBox alignment="CENTER" spacing="22"
+              prefWidth="450.0" minWidth="450.0" maxWidth="450.0"
+              prefHeight="600.0" minHeight="600.0" maxHeight="600.0"
+              styleClass="form-box">
+
+            <Label text="Créer un compte adhérent" styleClass="title-label"/>
+
+            <GridPane hgap="10" vgap="12" prefWidth="420">
+
+                <columnConstraints>
+                    <ColumnConstraints minWidth="140" maxWidth="140" halignment="RIGHT"/>
+                    <ColumnConstraints minWidth="200" maxWidth="200" halignment="LEFT"/>
+                </columnConstraints>
+
+                <!-- Nom -->
+                <Label text="Nom :"               GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="nomField"       GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <!-- Prénom -->
+                <Label text="Prénom :"            GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <TextField fx:id="prenomField"    GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                <!-- Email -->
+                <Label text="Email :"             GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <TextField fx:id="emailField"     GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                <!-- Mot de passe -->
+                <Label text="Mot de passe :"      GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                <PasswordField fx:id="passwordField" promptText="********"
+                               GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+                <!-- Date de naissance -->
+                <Label text="Date de naissance :" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                <DatePicker fx:id="birthDatePicker" promptText="jj/mm/aaaa" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+                <!-- Adresse -->
+                <Label text="Adresse :"           GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+                <TextField fx:id="adresseField"   GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+                <!-- CP -->
+                <Label text="Code postal :"       GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+                <TextField fx:id="cpField"        GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+
+                <!-- Ville -->
+                <Label text="Ville :"             GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+                <TextField fx:id="villeField"     GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+
+            </GridPane>
+
+            <VBox alignment="CENTER" spacing="10">
+
+                <Button fx:id="registerButton" text="S'inscrire" onAction="#handleRegisterButton" styleClass="primary-button" />
+
+                <Button fx:id="backToLoginButton" text="Retour à la connexion" onAction="#handleBackToLoginButton" styleClass="link-button-underlined" />
+
+            </VBox>
+
+            <Label fx:id="errorLabel" styleClass="error-label" />
+
+        </VBox>
+
+    </HBox>
+
+</AnchorPane>

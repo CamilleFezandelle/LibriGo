@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.librigo.Controller.LivreController"
+            prefWidth="900" prefHeight="600"
+            stylesheets="@../css/global.css, @../css/consulterLivre.css"
+            styleClass="root-pane">
+
+    <VBox alignment="CENTER" spacing="40" prefWidth="900" prefHeight="600">
+
+        <Label fx:id="bookTitle"
+               wrapText="true"
+               maxWidth="700"
+               styleClass="page-title"/>
+
+        <HBox spacing="30" alignment="CENTER" styleClass="book-card" prefWidth="700" prefHeight="400">
+
+            <padding>
+                <Insets top="30" right="30" bottom="30" left="30"/>
+            </padding>
+
+            <VBox spacing="20" prefWidth="350">
+
+                <Label text="Informations générales" styleClass="section-title"/>
+
+                <GridPane hgap="10" vgap="8">
+
+                    <columnConstraints>
+                        <ColumnConstraints halignment="RIGHT" minWidth="120"/>
+                        <ColumnConstraints halignment="LEFT" minWidth="150"/>
+                    </columnConstraints>
+
+                    <!-- ISBN -->
+                    <Label text="ISBN :" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                    <Label fx:id="bookISBN" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                    <!-- Auteur -->
+                    <Label text="Auteur :" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                    <Label fx:id="bookAuthor" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                    <!-- Genre -->
+                    <Label text="Genre :" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                    <Label fx:id="bookGenre" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                    <!-- Année -->
+                    <Label text="Année :" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                    <Label fx:id="bookYear" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+                    <!-- Disponibilité -->
+                    <Label text="Disponibilité :" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                    <Label fx:id="bookAvailability" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+                </GridPane>
+
+                <Button fx:id="borrowButton" text="📚 Emprunter" styleClass="borrow-button" onAction="#handleBorrowButton" />
+
+                <Button fx:id="backButton" text="◀ Retourner au catalogue" styleClass="back-button" onAction="#handleBackButton" />
+
+            </VBox>
+
+            <VBox spacing="10" prefWidth="320">
+                <Label text="Description" styleClass="section-title"/>
+                <TextArea fx:id="bookDescription"
+                          wrapText="true"
+                          editable="false"
+                          styleClass="book-description"/>
+            </VBox>
+        </HBox>
+
+    </VBox>
+
+</AnchorPane>

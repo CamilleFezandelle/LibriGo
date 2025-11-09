@@ -1,0 +1,108 @@
+/* ==============================
+   DASHBOARD.CSS - Styles spécifiques
+   ============================== */
+
+.account-label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.account-number-label {
+    -fx-font-size: 13px;
+    -fx-text-fill: #666666;
+    -fx-font-style: italic;
+}
+
+.book-card {
+    -fx-background-color: #2b2b2b;
+    -fx-background-radius: 10;
+    -fx-padding: 15;
+    -fx-spacing: 20;
+    -fx-alignment: CENTER_LEFT;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 2);
+}
+
+.book-card:hover {
+    -fx-background-color: #333333;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 0, 4);
+}
+
+.book-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.book-author, .book-year {
+    -fx-text-fill: #cccccc;
+}
+
+.book-availability {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.book-button {
+    -fx-background-color: #0078d7;
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-padding: 5 15;
+    -fx-pref-width: 80px;
+    -fx-pref-height: 30px;
+    -fx-max-width: 80px;
+    -fx-max-height: 30px;
+    -fx-min-width: 80px;
+    -fx-min-height: 30px;
+}
+
+.book-button:hover {
+    -fx-background-color: #005fa3;
+}
+
+.logout-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #d9534f;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-font-weight: normal;
+    -fx-cursor: hand;
+    -fx-padding: 0;
+    -fx-border-width: 0;
+    -fx-alignment: CENTER_LEFT;
+}
+
+.logout-button:hover {
+    -fx-text-fill: #b52b27;
+}
+
+.account-button {
+    -fx-background-color: #4a90e2;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-padding: 5 15;
+}
+
+.account-button:hover {
+    -fx-background-color: #357abd;
+}
+
+.libraire-button {
+    -fx-background-color: #fc4a1a;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-padding: 5 15;
+}
+
+.libraire-button:hover {
+    -fx-background-color: #d63a12;
+}
+
+/* ComboBox (thème sombre) -> global.css
+   ListCell (thème sombre) -> global.css
+   SearchField (thème sombre) -> global.css
+*/

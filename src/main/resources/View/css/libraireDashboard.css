@@ -1,0 +1,9 @@
+/* ==============================
+   LIBRAIRE DASHBOARD.CSS - Styles spécifiques
+   ============================== */
+
+.primary-button {
+    -fx-pref-width: 200px;
+    -fx-pref-height: 35px;
+    -fx-font-size: 14px;
+}

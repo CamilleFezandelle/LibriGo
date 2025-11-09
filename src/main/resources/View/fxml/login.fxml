@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.librigo.Controller.LoginController"
+            prefHeight="600.0" prefWidth="900.0"
+            stylesheets="@../css/global.css, @../css/login.css"
+            styleClass="root-pane">
+
+    <HBox prefWidth="900" prefHeight="600">
+
+        <StackPane prefWidth="450" styleClass="left-pane">
+
+            <ImageView fitWidth="200" preserveRatio="true">
+                <Image url="@../../Images/logo.png"/>
+            </ImageView>
+
+        </StackPane>
+
+        <VBox alignment="CENTER" spacing="20" prefWidth="450" styleClass="form-box">
+
+            <!-- Se connecter -->
+            <VBox alignment="CENTER" spacing="15">
+
+                <Label text="Connexion à mon espace" styleClass="title-label" />
+
+                <TextField fx:id="emailField" promptText="Adresse email" />
+                <PasswordField fx:id="passwordField" promptText="Mot de passe" />
+
+                <Button fx:id="loginButton" text="Se connecter" onAction="#handleLoginButton" styleClass="primary-button" />
+
+                <Button text="Mot de passe oublié ?" onAction="#handleForgotPasswordLink" styleClass="link-button-underlined" />
+
+                <Label fx:id="errorLabel" wrapText="true" styleClass="error-label" />
+
+            </VBox>
+
+            <Separator prefWidth="260" styleClass="divider" />
+
+            <!-- S'inscrire -->
+            <VBox alignment="CENTER" spacing="5">
+
+                <padding>
+                    <Insets top="10" right="10" bottom="10" left="10"/>
+                </padding>
+
+                <Label text="Pas encore de compte ?" styleClass="register-text" />
+
+                <Button text="S'inscrire" onAction="#handleRegisterLink" styleClass="link-button-underlined" />
+
+            </VBox>
+
+        </VBox>
+
+    </HBox>
+
+</AnchorPane>
