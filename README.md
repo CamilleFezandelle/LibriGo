@@ -5,7 +5,7 @@ Elle permet aux adhérents de consulter, emprunter et restituer des livres, tand
 
 ---
 
-# ✨ Fonctionnalités principales
+## ✨ Fonctionnalités principales
 
 - 🔐 **Authentification sécurisée des adhérents**
 - 📖 **Consultation du catalogue** des livres disponibles
